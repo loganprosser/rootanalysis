@@ -1,0 +1,7 @@
+root -l <<EOF > ~/event_2000_tree_dump.txt
+TFile *f = TFile::Open("event_2000.root");
+TDirectory *dir = (TDirectory*)f->Get("trackingNtuple");
+TTree *t = (TTree*)dir->Get("tree");
+t->Print();
+.q
+EOF
