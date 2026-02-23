@@ -1,4 +1,5 @@
 import ROOT
+from ROOT import TCanvas
 import sys
 from io import StringIO
 
@@ -15,8 +16,12 @@ t.Print()
 
 sys.stdout = sys.__stdout__
 
-tree_info = buff.getvalue()
+tree_info = buf.getvalue()
 print(tree_info)
+
+canvas = TCanvas("canvas", "", 800, 450)
+t.Draw("trk_eta")
+canvas.Draw()
 
 #a = t.Print()
 
