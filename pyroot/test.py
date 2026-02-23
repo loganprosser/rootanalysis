@@ -3,8 +3,7 @@ import sys
 from io import StringIO
 
 
-f = ROOT.TFile.Open("/data2/segmentlinking/CMSSW_12_5_0_pre3/RelValTTbar_14TeV_CMSSW_12_5_0_pre3/event_1000.root
-")
+f = ROOT.TFile.Open("/data2/segmentlinking/CMSSW_12_5_0_pre3/RelValTTbar_14TeV_CMSSW_12_5_0_pre3/event_1000.root")
 dir = f.Get("trackingNtuple")
 t = dir.Get("tree")
 
